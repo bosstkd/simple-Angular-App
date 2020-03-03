@@ -1,0 +1,9 @@
+<ul>
+  <li>Nom : {{info.nom}}</li>
+  <li>Mail: {{info.mail}}</li>
+  <li>Tel : {{info.tel}}</li>
+</ul>
+<div>
+  <input type="text" [(ngModel)]="comment.message" >
+  <button (click)="addComment()" [disabled]="newComment" >Add Comment</button>
+</div>
