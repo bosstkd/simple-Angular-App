@@ -17,13 +17,14 @@ export class AboutComponent implements OnInit {
     tel:"0626137069"
   }
   comments = [];
-  comment={date:null, message:''};
+  comment={id:0, date:null, message:''};
   newComment=false;
 
 addComment(){
   if(this.comment.message !=''){
+    this.comment.id ++;
     this.comment.date = new Date();
-    this.comments.push({date:this.comment.date, message:this.comment.message});
+    this.comments.push({id:this.comment.id,date:this.comment.date, message:this.comment.message});
     this.comment.message='';
   }
 }
